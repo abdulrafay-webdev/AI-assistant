@@ -43,8 +43,10 @@ You have vast expertise in:
 
 
 # ✅ Load environment variables
-load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")
+# load_dotenv()
+# api_key = os.getenv("GOOGLE_API_KEY")
+
+api_key = st.secrets["general"]["GOOGLE_API_KEY"]
 
 if not api_key:
     st.error("🚨 API key not found! Please check your .env file.")
