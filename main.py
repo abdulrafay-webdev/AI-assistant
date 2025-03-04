@@ -181,7 +181,7 @@ from datetime import datetime
 # ✅ Sanity Configuration
 SANITY_PROJECT_ID = "sen2qyse"
 SANITY_DATASET = "production"
-SANITY_TOKEN = st.secrets["general"]["SANITY_API_TOKEN"]
+SANITY_TOKEN = st.secrets["general"].get("SANITY_API_TOKEN", None)
 SANITY_API_URL = f"https://{SANITY_PROJECT_ID}.api.sanity.io/v2023-03-01/data"
 HEADERS = {"Authorization": f"Bearer {SANITY_TOKEN}", "Content-Type": "application/json"}
 
